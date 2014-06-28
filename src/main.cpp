@@ -964,7 +964,7 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
-    int64_t nSubsidy = 10 * COIN;
+    int64_t nSubsidy = 5 * COIN;
 	if(pindexBest->nHeight < 2)
     {
         nSubsidy = 500 * COIN;
@@ -2497,9 +2497,9 @@ bool LoadBlockIndex(bool fAllowNew)
         if (!fAllowNew)
             return false;
 
-        const char* pszTimestamp = "Firecoin The First X15 PoW/PoS Hybrid Cryptocurrency";
+        const char* pszTimestamp = "Firecoin The First X15 PoW PoS Hybrid Cryptocurrency";
         CTransaction txNew;
-        txNew.nTime = 1403911223;
+        txNew.nTime = 1403927609;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2509,9 +2509,9 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1403911223;
+        block.nTime    = 1403927609;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 1708603;
+        block.nNonce   = 1822523;
 		if(fTestNet)
         {
             block.nNonce   = 0;
@@ -2538,7 +2538,7 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("block.nNonce = %u \n", block.nNonce);
 
         //// debug print
-        assert(block.hashMerkleRoot == uint256("0x93d386c0246b6879bf30a5a8e7948e7caef3d6b4f0898f524b2c27c51695e75f"));
+        assert(block.hashMerkleRoot == uint256("0xc1979ae84522f97066791b8c8d15bd048cc0b3c9bf9ae08ba03b3745377fc213"));
         block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
