@@ -1,0 +1,4 @@
+Building Firecoin
+See doc/readme-qt.rst for instructions on building Firecoin QT.
+
+See doc/build-*.txt for instructions on building firecoind.
