@@ -1,15 +1,15 @@
 Firecoin Information:
 
-PoW/PoS Coin (Proof of work then Proof of stake)
+First X15 PoW/PoS Coin (Proof of work then Proof of stake)
 
 RPC Port: 49698
 P2P Port: 49697
 
-Algorithm: X13 POW/POS
+Algorithm: X15 POW/POS
 Ticker: FIRE
-Max PoW Coins: ~216,500 FIRE
-PoS Starts on Block 5,000 ~4 days
-PoS 4% Annual Interest
+Max PoW Coins: ~100,000 FIRE
+PoS Starts on Block 4500 ~3-4 days
+PoS 1% Annual Interest
 
 Development process
 ===========================
